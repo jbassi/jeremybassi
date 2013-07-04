@@ -1,0 +1,181 @@
+body {
+	font-family: "Josefin Slab", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: #000000;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+a, img {
+    border: none;
+    outline: none;
+}
+
+.arrow {
+	margin: 0em auto 1em auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.arrow img {
+	width: 40px;
+	height: 40px;
+}
+
+.fade {
+	cursor: pointer;
+}
+
+
+/* INDEX */
+#index {
+	width: 45em;
+	padding-bottom: 3em;
+}
+
+#initials {
+	font-size: 7em;
+	text-align: center;
+	display: none;
+}
+
+#initials span {
+	cursor: pointer;
+}
+
+#selections {
+	display: none;  
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.selection {
+	display: inline-block;
+	font-size: 3em;
+	margin: 0px 8px 0px 8px;
+	opacity: .6;
+}
+/* END INDEX */
+
+
+/* ABOUT & CONTACT*/
+#about, #contact {
+	display: none;
+	width: 45em;
+}
+
+#contact, #index {
+	margin-top: -40px;
+}
+
+#about p {
+	font-size: 1.25em;
+}
+
+#contact {
+	text-align: center;
+}
+
+#contact .fade {
+	opacity: .6;
+}
+/* END ABOUT & CONTACT*/
+
+
+/* RESUME */
+h1 {
+	font-size: 175%;
+	margin: 0;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 140%;
+	margin: 0;
+	font-weight: bold;
+}
+
+div > ul {
+	font-size: 120%;
+}
+
+#resume {
+	margin: 0 auto;
+	width: 65em;
+	display: none;
+	position: relative;
+}
+
+#resume .arrow {
+	background-color: #FFFFFF;
+	margin-top: 5px;
+	width: 100%;
+	position: absolute;
+	opacity: .6;
+	z-index: 1;
+}
+
+/* LEFT DIV */
+#left {
+	background-color: #FFFFFF;
+	width: 20em;
+	float: left;
+	position: absolute;
+}
+
+#info {
+	margin: 5% 0% 0% 12.5%;
+	position: relative;
+	z-index: 2;
+}
+
+#info span {
+	font-weight: bold;
+}
+
+#name {
+	margin: 4em 0em 0em 1em;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+/* END LEFT DIV */
+
+/* RIGHT DIV */
+#right {
+	width: 100%;
+	float: right;
+	margin-top: 4em;
+	margin-left: -20em;
+	position: relative;
+}
+
+#right_content {
+	margin-left: 20em;
+}
+/* END RIGHT DIV */
+
+/* SECTION SPACING */
+#right_content div {
+	margin: 0% 0% 3% 0%;
+}
+
+#profile {
+	font-size: 1.35em;
+}
+
+.clear {
+	height: 0em;
+	clear: both;
+}
+
+/* LIST SYLING */
+div ul {
+	margin: 1%;
+	list-style-type: disc;
+}
+/* END RESUME */
