@@ -4,6 +4,14 @@
 $(document).ready(function() {
   $("#initials").fadeIn(1200);
 
+  // SHOW SELECTIONS
+  $("#hover").mouseenter(function() {
+    $("#selections").fadeIn("slow");
+  });
+  $("#index").mouseleave(function () {
+    $("#selections").fadeOut("slow");
+  });
+
   // CENTER DIV
   jQuery.fn.center = function () {
     this.css("position","absolute");
@@ -18,14 +26,6 @@ $(document).ready(function() {
   // RESIZE WINDOW
   $(window).resize(function() {
     $("#" + $("body > div:visible").attr("id")).center();
-  });
-
-  // SHOW SELECTIONS
-  $("#hover").mouseenter(function() {
-    $("#selections").fadeIn("slow");
-  });
-  $("#index").mouseleave(function () {
-    $("#selections").fadeOut("slow");
   });
 
   // SELECTION ANIMATION
@@ -68,7 +68,6 @@ $(document).ready(function() {
 
   // ARROW FUNCTON
   $(".arrow").click(function() {
-    $("#index").center();
     $(this).parent().fadeOut("fast", function() {
       $("#index").fadeIn("fast", function() {
         $("#selections").fadeIn("slow");
