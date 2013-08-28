@@ -6,10 +6,10 @@ $(document).ready(function() {
 
   // SHOW SELECTIONS
   $("#hover").mouseenter(function() {
-    $("#selections").fadeIn("slow");
+    $("#selections").fadeIn(300);
   });
   $("#index").mouseleave(function () {
-    $("#selections").fadeOut("slow");
+    $("#selections").fadeOut(500);
   });
 
   // CENTER DIV
@@ -23,7 +23,7 @@ $(document).ready(function() {
   // INITIALLY CENTER INDEX
   $("#index").center();
 
-  // RESIZE WINDOW
+  // ON WINDOW RESIZE
   $(window).resize(function() {
     $("#" + $("body > div:visible").attr("id")).center();
   });
@@ -58,7 +58,22 @@ $(document).ready(function() {
     });
   });
 
-  // RESUME MOVEMENT
+  // NAVIGATE FROM ABOUT TO RESUME
+  $("#to-resume").click(function() {
+    $("#about").fadeOut('fast', function() {
+      $("#resume").fadeIn('fast');
+    });
+  });
+
+  // NAVIGATE FROM ABOUT TO CONTACT
+  $("#to-contact").click(function() {
+    $("#about").fadeOut('fast', function() {
+      $("#contact").fadeIn('fast');
+      $("#contact").center();
+    });
+  });
+
+  // RESUME TOP DIV MOVEMENT
   $(window).scroll(function(){
     $("#left").stop().animate({"marginTop":
       ($(window).scrollTop()) + "px"}, {"duration": 400}, {"easing": "easeOutQuad"});
@@ -69,6 +84,7 @@ $(document).ready(function() {
   // ARROW FUNCTON
   $(".arrow").click(function() {
     $(this).parent().fadeOut("fast", function() {
+      $("#index").center();
       $("#index").fadeIn("fast", function() {
         $("#selections").fadeIn("slow");
       });
