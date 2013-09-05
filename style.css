@@ -16,8 +16,12 @@ a, img {
     outline: none;
 }
 
+p {
+	text-align: left;
+}
+
 .arrow {
-	margin: 0em auto 1em auto;
+	margin: 0 auto;
 	text-align: center;
 	cursor: pointer;
 }
@@ -31,15 +35,26 @@ a, img {
 	cursor: pointer;
 }
 
+#index, #about, #contact, #projects {
+	position: absolute;
+}
+
+#about span, #resume span, #projects span {
+	text-decoration: underline;
+}
 
 /* INDEX */
 #index {
-	width: 45em;
-	padding-bottom: 3em;
+	width: 720px;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	margin-left: -360px;
+	margin-top: -150px;
 }
 
 #initials {
-	font-size: 7em;
+	font-size: 110px;
 	text-align: center;
 	display: none;
 }
@@ -57,39 +72,49 @@ a, img {
 
 .selection {
 	display: inline-block;
-	font-size: 3em;
+	font-size: 50px;
 	margin: 0px 8px 0px 8px;
 	opacity: .6;
 }
 /* END INDEX */
 
 
-/* ABOUT & CONTACT*/
-#about, #contact {
+/* ABOUT */
+#about {
 	display: none;
-	width: 45em;
+	width: 720px;
+	height: 460px;
+	left: 50%;
+	top: 50%;
+	margin-left: -360px;
+	margin-top: -230px;
 }
 
-#contact, #index {
-	margin-top: -40px;
-}
-
-#about p {
-	font-size: 1.25em;
+#about p, #pweb p, #couplr p {
+	font-size: 20px;
 }
 
 #about span {
 	cursor: pointer;
 }
+/* END ABOUT */
 
+/* CONTACT */
 #contact {
+	display: none;
 	text-align: center;
+	height: 190px;
+	width: 420px;
+	top: 50%;
+	left: 50%;
+	margin-top: -130px;
+	margin-left: -210px;
 }
 
 #contact .fade {
 	opacity: .6;
 }
-/* END ABOUT & CONTACT*/
+/* END CONTACT */
 
 
 /* RESUME */
@@ -111,26 +136,53 @@ div > ul {
 
 #resume {
 	margin: 0 auto;
-	width: 65em;
+	width: 1020px;
 	display: none;
 	position: relative;
 }
 
-#resume .arrow {
+#resume span {
+	text-decoration: none;
+}
+
+#resume-arrow {
 	background-color: #FFFFFF;
-	margin-top: 5px;
-	width: 100%;
-	position: absolute;
-	opacity: .6;
+	width: 1020px;
+	position: fixed;
 	z-index: 1;
+	top: 0;
+}
+
+#resume-arrow img {
+	margin: 5px;
+}
+
+#PDF {
+	font-size: 22px;
+	position: absolute;
+	right: 10px;
+	top: 16px;
+	opacity: .6;
+	z-index: 2;
+}
+
+#small-name {
+	position: absolute;
+	left: 10px;
+	font-size: 40px;
+	font-weight: bold;
+	top: 6px;
+	display: none;
+	text-decoration: underline;
 }
 
 /* LEFT DIV */
 #left {
 	background-color: #FFFFFF;
-	width: 20em;
+	width: 300px;
 	float: left;
-	position: absolute;
+	position: fixed;
+	overflow: hidden;
 }
 
 #info {
@@ -152,20 +204,16 @@ div > ul {
 
 /* RIGHT DIV */
 #right {
-	width: 100%;
+	width: 720px;
 	float: right;
-	margin-top: 4em;
-	margin-left: -20em;
+	margin-top: 70px;
 	position: relative;
-}
-
-#right_content {
-	margin-left: 20em;
+	overflow: hidden;
 }
 /* END RIGHT DIV */
 
 /* SECTION SPACING */
-#right_content div {
+#right div {
 	margin: 0% 0% 3% 0%;
 }
 
@@ -174,7 +222,7 @@ div > ul {
 }
 
 .clear {
-	height: 0em;
+	height: 0;
 	clear: both;
 }
 
@@ -184,3 +232,65 @@ div ul {
 	list-style-type: disc;
 }
 /* END RESUME */
+
+
+#projects {
+	display: none;
+	text-align: center;
+	width: 720px;
+	height: 440px;
+	left: 50%;
+	top: 50%;
+	margin-left: -360px;
+	margin-top: -220px;
+}
+
+#project-selections {
+	margin-top: 60px;
+}
+
+#project-selections div {
+	margin: 10px 0px 10px 0px;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+#project-arrow, #return {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	left: 340px;
+}
+
+#project-arrow img, #return img {
+	width: 40px;
+	height: 40px;
+}
+
+#return {
+	display: none;
+	left: 316px;
+}
+
+#pweb, #couplr {
+	display: none;
+	overflow: scroll;
+	width: 720px;
+	height: 380px;
+	margin-top: 60px;
+}
+
+#couplr img {
+	margin: 10px;
+	height: 300px;
+	width: 400px;
+	border: 4px solid black;
+}
+
+#match-img {
+	border: 4px solid black;
+	height: 300px;
+	width: 300px;
+}
