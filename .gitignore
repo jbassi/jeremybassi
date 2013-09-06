@@ -1,5 +1,6 @@
 /icons
 /images
+/downloads
 .DS_Store
 *.sublime-project
 *.sublime-workspace
