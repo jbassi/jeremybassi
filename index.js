@@ -98,19 +98,19 @@ $(document).ready(function() {
 
     $('#project-selections').fadeOut('fast', function() {
       if(projectIndex === 0) {
-        $('#pweb').fadeIn('fast')
-        document.title = 'Project -- Personal Website'
-      }
-      else if(projectIndex === 1) {
         $('#couplr').fadeIn('fast')
         document.title = 'Project -- Couplr'
+      }
+      else if(projectIndex === 1) {
+        $('#pweb').fadeIn('fast')
+        document.title = 'Project -- Personal Website'
       }
     })
   })
 
   // Project return arrow navigation control
   $('#return').click(function() {
-    if(projectIndex === 0) {
+    if(projectIndex === 1) {
       $('#pweb').fadeOut('fast')
       $(this).fadeOut('fast', function() {
         $('#project-selections').fadeIn('fast')
@@ -118,7 +118,7 @@ $(document).ready(function() {
         document.title = 'Jeremy Bassi | Projects'
       })
     }
-    else if(projectIndex === 1) {
+    else if(projectIndex === 0) {
       $('#couplr').fadeOut('fast')
       $(this).fadeOut('fast', function() {
         $('#project-selections').fadeIn('fast')
