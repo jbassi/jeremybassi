@@ -141,10 +141,6 @@ div > ul {
 	position: relative;
 }
 
-#resume span {
-	text-decoration: none;
-}
-
 #resume-arrow {
 	background-color: #FFFFFF;
 	width: 1020px;
@@ -193,6 +189,7 @@ div > ul {
 
 #info span {
 	font-weight: bold;
+	text-decoration: none;
 }
 
 #name {
